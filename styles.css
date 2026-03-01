@@ -128,6 +128,40 @@ body, html {
 }
 
 /* ========================================== */
+/* SOMBRERO */
+/* ========================================== */
+
+.sombrero {
+    position: absolute;
+    top: -125px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 180px;
+    z-index: 20;
+}
+
+.sombrero .copa {
+    width: 120px;
+    height: 150px;
+    background: linear-gradient(to right, #111, #333);
+    border-radius: 10px 10px 0 0;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.sombrero .ala {
+    width: 200px;
+    height: 30px;
+    background: linear-gradient(to right, #111, #333);
+    border-radius: 50%;
+    position: relative;
+    top: -20px;
+    z-index: 1;
+}
+
+/* ========================================== */
 /* OJOS */
 /* ========================================== */
 
@@ -157,7 +191,7 @@ body, html {
 }
 
 /* ========================================== */
-/* BIGOTE (TU VERSIÓN ACTUAL) */
+/* BIGOTE */
 /* ========================================== */
 
 .mustache {
