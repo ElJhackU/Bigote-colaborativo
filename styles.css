@@ -153,7 +153,7 @@ body, html {
         radial-gradient(circle at 45% 40%, rgba(255,255,255,0.8) 8%, transparent 9%),
         radial-gradient(circle at 50% 50%, #4da6ff 35%, #003366 70%),
         white;
-    animation: parpadeo 4s infinite;
+    animation: parpadeo 3s infinite;
 }
 
 /* --- ANIMACIONES --- */
