@@ -156,7 +156,59 @@ body, html {
     animation: parpadeo 3s infinite;
 }
 
+/* ========================================== */
+/* BIGOTE */
+/* ========================================== */
+
+.mustache {
+    /* Tamaño general del contenedor reducido */
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    color: #1a1a1a;
+    z-index: 10; 
+
+    /* Círculos base más pequeños y más juntos */
+    box-shadow: 
+        -25px 150px 0 0 currentColor, 
+        25px 150px 0 0 currentColor;
+}
+
+.mustache::before {
+    content: "";
+    position: absolute;
+    right: 81%; 
+    top: 93px; 
+    /* Dimensiones de los pelos reducidas */
+    width: 100px;
+    height: 60px;
+    /* Grosor del bigote más fino */
+    border-bottom: solid 80px currentColor;
+    border-radius: 0 0 0 100%;
+    transform: rotate(-55deg); 
+    transform-origin: right 100px;
+}
+
+.mustache::after {
+    content: "";
+    position: absolute;
+    left: 82%;
+    top: 93px; 
+    /* Dimensiones de los pelos reducidas */
+    width: 100px;
+    height: 60px;
+    /* Grosor del bigote más fino */
+    border-bottom: solid 80px currentColor;
+    border-radius: 0 0 100% 0;
+    transform: rotate(55deg); 
+    transform-origin: left 100px;
+}
 /* --- ANIMACIONES --- */
+
 @keyframes palpitoSol {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.05); }
@@ -171,3 +223,4 @@ body, html {
     0%, 90%, 100% { transform: scaleY(1); }
     95% { transform: scaleY(0.1); }
 }
+
