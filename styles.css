@@ -157,11 +157,10 @@ body, html {
 }
 
 /* ========================================== */
-/* BIGOTE */
+/* BIGOTE (TU VERSIÓN ACTUAL) */
 /* ========================================== */
 
 .mustache {
-    /* Tamaño general del contenedor reducido */
     width: 80px;
     height: 80px;
     position: absolute;
@@ -171,8 +170,6 @@ body, html {
     border-radius: 50%;
     color: #1a1a1a;
     z-index: 10; 
-
-    /* Círculos base más pequeños y más juntos */
     box-shadow: 
         -25px 150px 0 0 currentColor, 
         25px 150px 0 0 currentColor;
@@ -183,10 +180,8 @@ body, html {
     position: absolute;
     right: 81%; 
     top: 93px; 
-    /* Dimensiones de los pelos reducidas */
     width: 100px;
     height: 60px;
-    /* Grosor del bigote más fino */
     border-bottom: solid 80px currentColor;
     border-radius: 0 0 0 100%;
     transform: rotate(-55deg); 
@@ -198,15 +193,45 @@ body, html {
     position: absolute;
     left: 82%;
     top: 93px; 
-    /* Dimensiones de los pelos reducidas */
     width: 100px;
     height: 60px;
-    /* Grosor del bigote más fino */
     border-bottom: solid 80px currentColor;
     border-radius: 0 0 100% 0;
     transform: rotate(55deg); 
     transform-origin: left 100px;
 }
+
+/* ========================================== */
+/* CORBATA */
+/* ========================================== */
+
+.corbata {
+    position: absolute;
+    bottom: -240px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nudo {
+    width: 60px;
+    height: 40px;
+    background-color: #d32f2f; 
+    clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.cuerpo {
+    width: 80px;
+    height: 220px;
+    background-color: #f44336; 
+    clip-path: polygon(20% 0%, 80% 0%, 100% 85%, 50% 100%, 0% 85%);
+    margin-top: -5px; 
+}
+
 /* --- ANIMACIONES --- */
 
 @keyframes palpitoSol {
@@ -223,4 +248,3 @@ body, html {
     0%, 90%, 100% { transform: scaleY(1); }
     95% { transform: scaleY(0.1); }
 }
-
