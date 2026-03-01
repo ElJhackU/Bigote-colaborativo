@@ -1,0 +1,284 @@
+/* ========================================== */
+/* FONDO DE CARICATURA */
+/* ========================================== */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fondo-caricatura {
+    width: 100vw;
+    height: 100vh;
+    background-color: #74D3F7;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- COLINA --- */
+.piso {
+    position: absolute;
+    bottom: -15vh;
+    width: 130vw;
+    height: 45vh;
+    background-color: #62E337;
+    border-radius: 50% 50% 0 0;
+    border-top: 10px solid #005F00;
+    z-index: 1;
+}
+
+/* --- SOL --- */
+.sol {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 120px;
+    height: 120px;
+    background-color: #FFE033;
+    border-radius: 50%;
+    border: 8px solid #FF9D33;
+    z-index: 2;
+    animation: palpitoSol 4s ease-in-out infinite;
+}
+
+.rayos {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotacionRayos 15s linear infinite;
+}
+
+.rayo {
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    width: 18px;
+    height: 60px;
+    background-color: #FF9D33;
+    border-radius: 10px;
+    transform-origin: center calc(100% + 60px);
+    transform: translateX(-50%);
+}
+
+.r1 { transform: translateX(-50%) rotate(0deg); }
+.r2 { transform: translateX(-50%) rotate(60deg); }
+.r3 { transform: translateX(-50%) rotate(120deg); }
+.r4 { transform: translateX(-50%) rotate(180deg); }
+.r5 { transform: translateX(-50%) rotate(240deg); }
+.r6 { transform: translateX(-50%) rotate(300deg); }
+
+/* --- NUBES --- */
+.nube {
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: 5px solid #E0E0E0;
+}
+
+#nube1 { top: 15%; right: 15%; }
+#nube2 { top: 25%; right: 40%; scale: 0.7;}
+#nube3 { top: 5%; left: 30%; scale: 1.2; opacity: 0.8;}
+
+/* --- ÁRBOLES --- */
+.arbol {
+    position: absolute;
+    bottom: 30vh;
+}
+
+.arbol .tronco {
+    width: 30px;
+    height: 100px;
+    background-color: #96613F;
+}
+
+.arbol .copa {
+    position: absolute;
+    bottom: 80px;
+    left: -35px;
+    width: 100px;
+    height: 100px;
+    background-color: #2DAB1B;
+    border-radius: 50%;
+}
+
+#arbol1 { left: 15%; }
+#arbol2 { right: 20%; }
+
+/* --- CONTENEDOR EMOJI --- */
+.contenedor-emoji {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    z-index: 10;
+}
+
+.emoji{
+    width: 100%;
+    height: 100%;
+    background: #FFD93B;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* ========================================== */
+/* SOMBRERO */
+/* ========================================== */
+
+.sombrero {
+    position: absolute;
+    top: -125px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 180px;
+    z-index: 20;
+}
+
+.sombrero .copa {
+    width: 120px;
+    height: 150px;
+    background: linear-gradient(to right, #111, #333);
+    border-radius: 10px 10px 0 0;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.sombrero .ala {
+    width: 200px;
+    height: 30px;
+    background: linear-gradient(to right, #111, #333);
+    border-radius: 50%;
+    position: relative;
+    top: -20px;
+    z-index: 1;
+}
+
+/* ========================================== */
+/* OJOS */
+/* ========================================== */
+
+.ojos {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ojos::before,
+.ojos::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 50% 50%, black 20%, transparent 21%),
+        radial-gradient(circle at 45% 40%, rgba(255,255,255,0.8) 8%, transparent 9%),
+        radial-gradient(circle at 50% 50%, #4da6ff 35%, #003366 70%),
+        white;
+    animation: parpadeo 3s infinite;
+}
+
+/* ========================================== */
+/* BIGOTE */
+/* ========================================== */
+
+.mustache {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    color: #1a1a1a;
+    z-index: 10; 
+    box-shadow: 
+        -25px 150px 0 0 currentColor, 
+        25px 150px 0 0 currentColor;
+}
+
+.mustache::before {
+    content: "";
+    position: absolute;
+    right: 81%; 
+    top: 93px; 
+    width: 100px;
+    height: 60px;
+    border-bottom: solid 80px currentColor;
+    border-radius: 0 0 0 100%;
+    transform: rotate(-55deg); 
+    transform-origin: right 100px;
+}
+
+.mustache::after {
+    content: "";
+    position: absolute;
+    left: 82%;
+    top: 93px; 
+    width: 100px;
+    height: 60px;
+    border-bottom: solid 80px currentColor;
+    border-radius: 0 0 100% 0;
+    transform: rotate(55deg); 
+    transform-origin: left 100px;
+}
+
+/* ========================================== */
+/* CORBATA */
+/* ========================================== */
+
+.corbata {
+    position: absolute;
+    bottom: -240px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nudo {
+    width: 60px;
+    height: 40px;
+    background-color: #d32f2f; 
+    clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.cuerpo {
+    width: 80px;
+    height: 220px;
+    background-color: #f44336; 
+    clip-path: polygon(20% 0%, 80% 0%, 100% 85%, 50% 100%, 0% 85%);
+    margin-top: -5px; 
+}
+
+/* --- ANIMACIONES --- */
+
+@keyframes palpitoSol {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes rotacionRayos {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes parpadeo {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+}
