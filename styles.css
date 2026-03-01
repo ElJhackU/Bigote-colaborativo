@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* Sin fondo */
+}
+
+/* Contenedor */
+.ojos {
+    position: relative;
+    width: 400px;
+    height: 200px;
+}
+
+/* Ojos */
+.ojos::before,
+.ojos::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    overflow: hidden;
+    animation: parpadeo 4s infinite;
+
+    /* Iris + Pupila + Brillo */
+    background:
+        radial-gradient(circle at 50% 50%, black 15%, transparent 16%),
+        radial-gradient(circle at 45% 40%, rgba(255,255,255,0.8) 8%, transparent 9%),
+        radial-gradient(circle at 50% 50%, #4da6ff 35%, #003366 70%),
+        white;
+}
+
+/* Posiciones */
+.ojos::before {
+    left: 0;
+}
+
+.ojos::after {
+    right: 0;
+}
+
+/* Parpadeo */
+@keyframes parpadeo {
+    0%, 90%, 100% {
+        height: 150px;
+    }
+    95% {
+        height: 10px;
+    }
+}
