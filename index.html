@@ -3,29 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bigote Colaborativo</title>
+    <title>Emoji Caballero - Caricatura</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="fondo-caricatura">
-    
-    <div class="sol">
-        <div class="rayos">
-            <div class="rayo r1"></div>
-            <div class="rayo r2"></div>
-            <div class="rayo r3"></div>
-            <div class="rayo r4"></div>
-            <div class="rayo r5"></div>
-            <div class="rayo r6"></div>
+    <div class="fondo-caricatura">
+        <!-- Elementos del cielo -->
+        <div class="sol">
+            <div class="rayos">
+                <div class="rayo r1"></div>
+                <div class="rayo r2"></div>
+                <div class="rayo r3"></div>
+                <div class="rayo r4"></div>
+                <div class="rayo r5"></div>
+                <div class="rayo r6"></div>
+            </div>
         </div>
-    </div>
 
-    <div class="nube" id="nube1"></div>
-    <div class="nube" id="nube2"></div>
-    <div class="nube" id="nube3"></div>
-    
-    <div class="piso">
+        <div class="nube" id="nube1"></div>
+        <div class="nube" id="nube2"></div>
+        <div class="nube" id="nube3"></div>
+
+        <!-- Personaje Completo -->
+        <div class="escena-personaje">
+            
+            <!-- Cabeza -->
+            <div class="contenedor-cabeza">
+                <div class="sombrero">
+                    <div class="copa"></div>
+                    <div class="ala"></div>
+                </div>
+                <div class="emoji">
+                    <div class="ojos"></div>
+                    <div class="mustache"></div>
+                </div>
+            </div>
+
+            <!-- Cuerpo -->
+            <div class="cuerpo-contenedor">
+                <div class="brazo izq"></div>
+                <div class="brazo der"></div>
+                
+                <div class="torso">
+                    <div class="camisa"></div>
+                    <div class="corbata">
+                        <div class="nudo"></div>
+                        <div class="cuerpo-corbata"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Paisaje inferior -->
         <div class="arbol" id="arbol1">
             <div class="copa"></div>
             <div class="tronco"></div>
@@ -34,28 +65,9 @@
             <div class="copa"></div>
             <div class="tronco"></div>
         </div>
+        
+        <div class="piso"></div>
     </div>
-    
-    <div class="contenedor-emoji">
-        <div class="emoji">
-
-            <div class="sombrero">
-                <div class="copa"></div>
-                <div class="ala"></div>
-            </div>
-
-            <div class="ojos"></div>
-            <div class="mustache"></div>
-
-            <div class="corbata">
-                <div class="nudo"></div>
-                <div class="cuerpo"></div>
-            </div>
-
-        </div>
-    </div>
-
-</div>
 
 </body>
 </html>
